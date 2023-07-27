@@ -1,0 +1,155 @@
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: Roboto, "Times New Roman", Times, serif;
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  border: 1px solid #222;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  margin: 0;
+  text-decoration: none;
+  color: white;
+}
+
+h2 {
+  margin: 0;
+}
+
+button {
+  border-radius: 20px;
+  border-color: 1px solid white;
+  padding: 10px 25px;
+  color: white;
+  background-color: hwb(199 12% 13%);
+}
+
+.sidebar {
+  background-color: hwb(199 12% 13%);
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 0.3fr auto 1fr;
+  height: 100vh;
+  color: white;
+  padding: 20px;
+  gap: 20px;
+}
+.sidebar a {
+  font-size: 1.2rem;
+  padding: 0 15px;
+}
+
+.top {
+  display: grid;
+  grid-template-columns: 60px auto;
+  grid-template-rows: auto;
+  justify-items: space-around;
+  align-content: center;
+}
+.top a {
+  font-size: 1.5rem;
+  align-self: center;
+  justify-self: start;
+}
+.top img {
+  height: 60px;
+  width: 60px;
+  object-fit: cover;
+}
+
+.middle {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: repeat(6, 40px);
+}
+
+.bottom {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: repeat(3, 40px);
+}
+
+.container {
+  background-color: #eee;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto 1fr;
+}
+
+.header {
+  background-color: white;
+  padding: 10px 30px;
+}
+.header img {
+  width: 50px;
+  height: 50px;
+}
+
+.upper {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  grid-template-rows: 60px;
+  gap: 50px;
+}
+.upper .search {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-row: inherit;
+  gap: 20px;
+  align-content: center;
+}
+.upper .search input {
+  background-color: #ddd;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  padding: 2px;
+}
+.upper .user-info {
+  display: grid;
+  grid-template-columns: 40px 40px auto;
+  gap: 20px;
+  justify-self: center;
+}
+.upper .user-info i, .upper .user-info img, .upper .user-info p {
+  align-self: center;
+}
+
+.lower {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 2px solid hwb(199 12% 13%);
+  align-items: center;
+}
+.lower .right {
+  display: grid;
+  grid-template-columns: 80px 80px 80px;
+}
+
+.content {
+  background-color: #222;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -9,6 +9,7 @@ html {
 
 body {
   margin: 0;
+  max-height: 100vh;
 }
 
 main {
@@ -34,16 +35,18 @@ a {
   color: white;
 }
 
-h2 {
+h1, h2 {
   margin: 0;
+  padding: 0;
 }
 
 button {
-  border-radius: 20px;
-  border-color: 1px solid white;
-  padding: 10px 25px;
+  outline: none;
+  padding: 10px 30px;
   color: white;
   background-color: hwb(199 12% 13%);
+  border: 1px solid hwb(199 12% 13%);
+  border-radius: 20px;
 }
 
 .sidebar {
@@ -51,7 +54,6 @@ button {
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: 0.3fr auto 1fr;
-  height: 100vh;
   color: white;
   padding: 20px;
   gap: 20px;
@@ -101,6 +103,13 @@ button {
 .header {
   background-color: white;
   padding: 10px 30px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+  gap: 20px;
+}
+.header h5, .header h2 {
+  margin: 0;
 }
 .header img {
   width: 50px;
@@ -120,36 +129,121 @@ button {
   gap: 20px;
   align-content: center;
 }
+.upper .search i {
+  align-self: center;
+}
 .upper .search input {
-  background-color: #ddd;
-  border: 1px solid #ddd;
-  border-radius: 8px;
+  background-color: #e2e8f0;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
   outline: none;
-  padding: 2px;
+  padding: 4px;
 }
 .upper .user-info {
   display: grid;
-  grid-template-columns: 40px 40px auto;
-  gap: 20px;
-  justify-self: center;
+  grid-template-columns: auto auto auto;
+  gap: 30px;
+  justify-self: end;
 }
 .upper .user-info i, .upper .user-info img, .upper .user-info p {
   align-self: center;
+}
+.upper .user-info i {
+  font-size: 1.5rem;
 }
 
 .lower {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  border: 2px solid hwb(199 12% 13%);
+  grid-template-rows: auto;
   align-items: center;
+}
+.lower .left {
+  display: grid;
+  grid-template-columns: 90px auto;
+  gap: 10px;
+  align-items: center;
+}
+.lower .left img {
+  width: 80px;
+  height: 80px;
 }
 .lower .right {
   display: grid;
-  grid-template-columns: 80px 80px 80px;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto;
+  justify-self: end;
+  gap: 20px;
 }
 
 .content {
-  background-color: #222;
+  background-color: #e2e8f0;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  padding: 40px 20px;
+}
+.content .main-content {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.content .main-content article {
+  display: grid;
+  background-color: #fff;
+  padding: 20px;
+  border-left: 8px solid #fbbf24;
+  border-radius: 8px;
+}
+.content .main-content article p {
+  color: #666;
+}
+.content .main-content article div {
+  justify-self: end;
+}
+.content .main-content article div i {
+  padding: 10px;
+}
+.content .others {
+  display: grid;
+  gap: 20px;
+}
+.content .others .announcements {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+}
+.content .others .announcements .item {
+  border-bottom: 1px solid #ccc;
+}
+.content .others .trends {
+  display: grid;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  gap: 20px;
+}
+.content .others .trends article {
+  display: grid;
+  grid-template-columns: 50px auto;
+  gap: 20px;
+  background-color: #eee;
+  padding: 10px;
+  border-radius: 6px;
+}
+.content .others .trends img {
+  height: 50px;
+  width: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+  align-self: center;
+}
+.content .others .trends div {
+  align-self: center;
+}
+.content .others .trends div h3, .content .others .trends div p {
+  margin: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -10,6 +10,7 @@ html {
 body {
   margin: 0;
   max-height: 100vh;
+  animation: fadeIn 0.4s ease-in;
 }
 
 main {
@@ -33,9 +34,16 @@ a {
   margin: 0;
   text-decoration: none;
   color: white;
+  font-size: 1.2rem;
+  padding: 0 15px;
+  transition: color 0.3s ease;
 }
 
-h1, h2 {
+a:hover {
+  color: #fbbf24;
+}
+
+h1, h2, h3, h4, h5, h6, p {
   margin: 0;
   padding: 0;
 }
@@ -47,6 +55,11 @@ button {
   background-color: hwb(199 12% 13%);
   border: 1px solid hwb(199 12% 13%);
   border-radius: 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  box-shadow: 2px 4px 4px hwb(199 12% 13%);
 }
 
 .sidebar {
@@ -57,10 +70,7 @@ button {
   color: white;
   padding: 20px;
   gap: 40px;
-}
-.sidebar a {
-  font-size: 1.2rem;
-  padding: 0 15px;
+  font-weight: 600;
 }
 
 .top {
@@ -105,12 +115,10 @@ button {
   grid-template-rows: auto auto;
   gap: 20px;
 }
-.header h5, .header h2 {
-  margin: 0;
-}
 .header img {
   width: 50px;
   height: 50px;
+  object-fit: cover;
 }
 
 .upper {
@@ -142,11 +150,18 @@ button {
   gap: 30px;
   justify-self: end;
 }
-.upper .user-info i, .upper .user-info img, .upper .user-info p {
+.upper .user-info i, .upper .user-info img, .upper .user-info h3 {
   align-self: center;
 }
+.upper .user-info i, .upper .user-info img {
+  cursor: pointer;
+}
 .upper .user-info i {
+  transition: transform 0.2s ease;
   font-size: 1.5rem;
+}
+.upper .user-info i:hover, .upper .user-info img:hover {
+  transform: scale(1.2);
 }
 
 .lower {
@@ -180,6 +195,11 @@ button {
   gap: 20px;
   padding: 40px 20px;
 }
+.content .content-wrapper {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 10px;
+}
 .content .main-content {
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
@@ -194,24 +214,34 @@ button {
   border-radius: 8px;
 }
 .content .main-content article p {
-  color: #666;
+  color: #442626;
 }
 .content .main-content article div {
   justify-self: end;
 }
 .content .main-content article div i {
   padding: 10px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+.content .main-content article div i:hover {
+  color: #fbbf24;
 }
 .content .others {
   display: grid;
-  gap: 20px;
+  gap: 10px;
 }
 .content .others .announcements {
   background-color: #fff;
-  padding: 20px;
+  padding: 30px;
   border-radius: 8px;
 }
+.content .others .announcements p {
+  color: #442626;
+  margin-bottom: 20px;
+}
 .content .others .announcements .item {
+  margin-bottom: 20px;
   border-bottom: 1px solid #ccc;
 }
 .content .others .trends {
@@ -241,6 +271,15 @@ button {
 }
 .content .others .trends div h3, .content .others .trends div p {
   margin: 0;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

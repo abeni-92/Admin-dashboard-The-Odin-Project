@@ -13,19 +13,8 @@ body {
   animation: fadeIn 0.4s ease-in;
 }
 
-main {
-  display: grid;
-  grid-template-columns: 300px 1fr;
-  border: 1px solid #222;
-}
-
-ul {
+ul, li {
   list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-li {
   padding: 0;
   margin: 0;
 }
@@ -59,7 +48,16 @@ button {
 }
 
 button:hover {
-  box-shadow: 2px 4px 4px hwb(199 12% 13%);
+  box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.3);
+}
+
+main {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+}
+
+#show {
+  display: none;
 }
 
 .sidebar {
@@ -212,6 +210,7 @@ button:hover {
   padding: 20px;
   border-left: 8px solid #fbbf24;
   border-radius: 8px;
+  transition: transform 0.3s ease-in, box-shadow 0.3s ease;
 }
 .content .main-content article p {
   color: #442626;
@@ -226,6 +225,10 @@ button:hover {
 }
 .content .main-content article div i:hover {
   color: #fbbf24;
+}
+.content .main-content article:hover {
+  box-shadow: 16px 16px 16px rgba(68, 17, 17, 0.5);
+  transform: translateY(-10px);
 }
 .content .others {
   display: grid;
@@ -273,6 +276,88 @@ button:hover {
   margin: 0;
 }
 
+@media (max-width: 900px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  h1 {
+    font-size: 20px;
+  }
+  h2 {
+    font-size: 16px;
+  }
+  .header {
+    padding: 10px 20px;
+  }
+  .upper {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px;
+  }
+  button {
+    padding: 8px 15px;
+    border-radius: 18px;
+  }
+  .content {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .content .main-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .content .main-content article {
+    padding: 15px;
+    border-left: 6px solid #fbbf24;
+  }
+  .content .others {
+    display: grid;
+    align-self: flex-start;
+    gap: 10px;
+  }
+}
+@media (max-width: 520px) {
+  h1 {
+    font-size: 16px;
+  }
+  h2 {
+    font-size: 14px;
+  }
+  .upper .search {
+    grid-template-columns: auto auto 1fr;
+  }
+  .upper .user-info h3 {
+    display: none;
+  }
+  .lower {
+    grid-template-columns: 0.7fr 1fr;
+    gap: 20px;
+  }
+  .lower .right {
+    justify-self: center;
+    gap: 10px;
+  }
+  button {
+    padding: 6px 10px;
+    border-radius: 18px;
+  }
+  #show {
+    font-size: 1.5rem;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+  #show:hover {
+    transform: scale(1.2);
+  }
+  .sidebar {
+    display: none;
+  }
+  .content {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
 @keyframes fadeIn {
   0% {
     opacity: 0;

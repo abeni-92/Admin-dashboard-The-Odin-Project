@@ -6,7 +6,7 @@
 	<title>Admin Dashboard</title>
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
-	<script src="script.js"></script>
+	<script src="script.js" defer></script>
 </head>
 <body>
 	<main>
@@ -25,24 +25,26 @@
 					<li><i class="fa-regular fa-clock"></i><a href="#">History</a></li>
 					<li><i class="fa-solid fa-file"></i><a href="#">Tasks</a></li>
 					<li><i class="fa-solid fa-users"></i><a href="#">Communities</a></li>
-				<!-- </ul> -->
-			</ul>
-			<ul class="bottom">
-				<li><i class="fa-solid fa-gear"></i><a href="#">Settings</a></li>
-				<li><i class="fa-regular fa-circle-question"></i><a href="#">Support</a></li>
-				<li><i class="fa-solid fa-shield-halved"></i><a href="#">Privacy</a></li>
-			</ul>
-			
-		</div>
-		<div class="container">
-			<div class="header">
-				<div class="upper">
-					<div class="search">
-						<i class="fa-solid fa-magnifying-glass"></i>
-						<input type="text">
-					</div>
-					<div class="user-info">
-						<i class="fa-solid fa-bell"></i>
+					<!-- </ul> -->
+				</ul>
+				<ul class="bottom">
+					<li><i class="fa-solid fa-gear"></i><a href="#">Settings</a></li>
+					<li><i class="fa-regular fa-circle-question"></i><a href="#">Support</a></li>
+					<li><i class="fa-solid fa-shield-halved"></i><a href="#">Privacy</a></li>
+				</ul>
+				
+			</div>
+			<div class="container">		
+				<!-- <i class="fa-solid fa-bars" id="show"></i> -->
+				<div class="header">
+					<div class="upper">
+						<div class="search">
+							<i class="fa-solid fa-bars" id="show"></i>
+							<i class="fa-solid fa-magnifying-glass"></i>
+							<input type="text">
+						</div>
+						<div class="user-info">
+							<i class="fa-solid fa-bell"></i>
 						<img src="./images/user1.jpg" alt="user">
 						<h3>Abenezer Tesfaye</h3>
 					</div>
